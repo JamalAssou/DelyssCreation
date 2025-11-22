@@ -314,6 +314,39 @@ button[type="submit"]:hover {
     background: var(--text-color);
 }
 
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fbfbfb;
+    font-size: 1rem;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+/* Quand l’utilisateur sélectionne une date */
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+}
+
 
 /* ==========================================================================
    FOOTER
