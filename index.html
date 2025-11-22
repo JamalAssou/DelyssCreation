@@ -107,19 +107,20 @@
         </div>
 
         <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Votre Nom & Prénom" required>
-                <input type="email" placeholder="Votre Email" required>
-                <select>
-                    <option value="">Type de gâteau...</option>
-                    <option value="layer">Layer Cake</option>
-                    <option value="number">Number Cake</option>
-                    <option value="cupcake">Cupcakes</option>
-                    <option value="bento">Bento Cake</option>
+            <form action="https://formspree.io/f/movbkvlr" method="POST">
+                <input type="text" name="nom" placeholder="Votre Nom & Prénom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <select name="type_gateau">
+                    <option value="">Type de cake...</option>
+                    <option value="Layer Cake">Layer Cake</option>
+                    <option value="Number Cake">Number Cake</option>
+                    <option value="Cupcakes">Cupcakes</option>
+                    <option value="Bento Cake">Bento Cake</option>
                 </select>
-                <input type="number" placeholder="Nombre de parts / invités">
-                <input type="date" placeholder="Date de l'événement">
-                <textarea rows="5" placeholder="Décrivez votre thème, vos saveurs et vos envies..."></textarea>
+                <input type="number" name="parts" placeholder="Nombre de parts / invités">
+                <input type="date" name="date_event" placeholder="Date de l'événement">
+                <textarea name="message" rows="5" placeholder="Décrivez votre thème, vos saveurs et vos envies..."></textarea>
+
                 <button type="submit">Envoyer ma demande</button>
             </form>
         </div>
@@ -131,11 +132,11 @@
     <p>Sur mesure, unique et délicieux</p>
     <br>
     <a href="https://www.instagram.com/delyss_creation" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-    <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">© 2024 Delyss Création. Tous droits réservés.</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">© 2025 Delyss Création. Tous droits réservés.</p>
 </footer>
-<a href="https://wa.me/32465578734" class="whatsapp-btn" target="_blank">
+<!--<a href="https://wa.me/32xxxxxxxx" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
-</a>
+</a>-->
 <script src="JS/main.js"></script>
 </body>
 </html>

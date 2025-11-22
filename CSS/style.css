@@ -337,14 +337,15 @@ footer {
     .hero-content h1 { font-size: 2.5rem; }
 }
 
-/* --- BOUTON WHATSAPP FLOTTANT --- */
+/*
+!* --- BOUTON WHATSAPP FLOTTANT --- *!
 .whatsapp-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 60px;
     height: 60px;
-    background-color: #25D366; /* Vert WhatsApp Officiel */
+    background-color: #25D366; !* Vert WhatsApp Officiel *!
     color: white;
     border-radius: 50%;
     display: flex;
@@ -352,17 +353,17 @@ footer {
     align-items: center;
     font-size: 35px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000; /* Pour qu'il soit toujours au-dessus du reste */
+    z-index: 1000; !* Pour qu'il soit toujours au-dessus du reste *!
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .whatsapp-btn:hover {
-    transform: scale(1.1); /* Grossit légèrement au survol */
+    transform: scale(1.1); !* Grossit légèrement au survol *!
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
 }
 
-/* Ajustement pour mobile pour ne pas gêner */
+!* Ajustement pour mobile pour ne pas gêner *!
 @media (max-width: 768px) {
     .whatsapp-btn {
         bottom: 20px;
@@ -371,4 +372,4 @@ footer {
         height: 50px;
         font-size: 28px;
     }
-}
+}*/
