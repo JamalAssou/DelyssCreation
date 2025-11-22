@@ -1,9 +1,11 @@
-/* --- VARIABLES & RESET --- */
+/* ==========================================================================
+   VARIABLES & RESET
+   ========================================================================== */
 :root {
-    --primary-color: #D4A5A5; /* Rose poudré (Logo) */
-    --secondary-color: #B38B8B; /* Rose plus foncé */
-    --bg-color: #FDFBF7; /* Crème léger */
-    --text-color: #4A4A4A; /* Gris foncé doux */
+    --primary-color: #D4A5A5;
+    --secondary-color: #B38B8B;
+    --bg-color: #FDFBF7;
+    --text-color: #4A4A4A;
     --white: #ffffff;
     --font-title: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
@@ -25,9 +27,12 @@ body {
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
 
-/* --- HEADER & NAV --- */
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
 header {
-    background-color: var(--white);
+    background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
@@ -44,39 +49,25 @@ nav {
     align-items: center;
 }
 
-/* --- LOGO CSS --- */
-
+/* --- LOGO --- */
 .logo {
-    display: flex;           /* Met l'image et le texte côte à côte */
-    align-items: center;     /* Centre verticalement l'image par rapport au texte */
-    gap: 12px;               /* Espace entre l'image et le texte */
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: var(--font-title);
-    font-size: 1.5rem;       /* Taille du texte sur PC */
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--secondary-color);
-    text-decoration: none;   /* Enlève le soulignement car c'est un lien */
 }
 
 .logo img {
-    height: 50px;            /* Hauteur fixe pour ne pas déformer la navbar */
-    width: auto;             /* Garde les proportions du logo */
-    border-radius: 50%;      /* Rend l'image ronde (parfait pour ton logo) */
-    object-fit: cover;       /* Assure que l'image remplit bien le cercle */
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* --- RESPONSIVE (MOBILE) --- */
-/* Ajoute ou modifie cette partie dans la section @media existante */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 1.2rem;   /* Réduit un peu le texte sur mobile pour éviter que ça dépasse */
-        gap: 8px;            /* Réduit l'espace image/texte */
-    }
-
-    .logo img {
-        height: 40px;        /* Logo un peu plus petit sur mobile */
-    }
-}
-
+/* --- NAV LINKS --- */
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -92,28 +83,36 @@ nav {
 }
 
 .btn-cta {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(212, 165, 165, 0.4);
+    box-shadow: 0 4px 15px rgba(212,165,165,0.4);
 }
 
 .btn-cta:hover {
-    background-color: var(--secondary-color);
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
-/* Mobile Menu Icon */
-.hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+/* Mobile menu icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
 
-/* --- HERO SECTION --- */
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?q=80&w=1920&auto=format&fit=crop');
+    margin-top: 60px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -121,8 +120,6 @@ nav {
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 0 1rem;
-    margin-top: 60px;
 }
 
 .hero-content h1 {
@@ -134,13 +131,14 @@ nav {
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 2rem;
 }
 
-/* --- SERVICES --- */
+
+/* ==========================================================================
+   SECTIONS / SERVICES / VALUES
+   ========================================================================== */
 .section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -161,10 +159,11 @@ nav {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     margin: 1rem auto 0;
 }
 
+/* --- SERVICES GRID --- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -176,9 +175,9 @@ nav {
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
+    border: 1px solid #f0f0f0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: 0.3s;
-    border: 1px solid #f0f0f0;
 }
 
 .card:hover {
@@ -189,113 +188,138 @@ nav {
 .card-icon {
     font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
 .card h3 {
     font-family: var(--font-title);
-    margin-bottom: 1rem;
     font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* --- PROCESS & VALUES --- */
+/* --- VALUES --- */
 .values {
-    background-color: var(--white);
+    background: var(--white);
 }
 
 .values-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    text-align: center;
     gap: 2rem;
 }
 
 .value-item {
     flex: 1;
     min-width: 250px;
+    text-align: center;
 }
 
 .value-item i {
     font-size: 2rem;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
 }
 
-/* --- CONTACT FORM --- */
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
     background: white;
-    padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
 }
 
-.contact-info, .contact-form {
+/* --- CONTACT INFO --- */
+.contact-info {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .contact-info h3 {
     font-family: var(--font-title);
-    margin-bottom: 1.5rem;
     color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    max-width: 400px;
+    margin: 0 auto 20px;
 }
 
 .info-item {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    gap: 12px;
     font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .info-item i {
-    margin-right: 15px;
     color: var(--primary-color);
+}
+
+/* --- FORMULAIRE --- */
+.contact-form {
+    flex: 1;
+    min-width: 280px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 input, select, textarea {
+    width: 100%;
+    max-width: 400px;
     padding: 1rem;
     border: 1px solid #eee;
     border-radius: 8px;
-    font-family: var(--font-body);
+    background: #fbfbfb;
     font-size: 1rem;
-    background-color: #fbfbfb;
 }
 
 input:focus, select:focus, textarea:focus {
-    outline: none;
     border-color: var(--primary-color);
-    background-color: white;
+    background: white;
+    outline: none;
 }
 
 button[type="submit"] {
-    background-color: var(--secondary-color);
+    width: 100%;
+    max-width: 400px;
+    background: var(--secondary-color);
     color: white;
-    border: none;
     padding: 1rem;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 1.1rem;
     font-weight: bold;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 button[type="submit"]:hover {
-    background-color: var(--text-color);
+    background: var(--text-color);
 }
 
-/* --- FOOTER --- */
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer {
-    background-color: #222;
+    background: #222;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -313,16 +337,21 @@ footer {
     color: var(--primary-color);
 }
 
-/* --- RESPONSIVE --- */
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
 @media (max-width: 768px) {
+
+    /* NAVIGATION */
     .nav-links {
-        display: none; /* Hidden by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
+        width: 100%;
         top: 70px;
         right: 0;
-        background-color: white;
-        width: 100%;
+        background: white;
         text-align: center;
         padding: 1rem 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.05);
@@ -332,155 +361,31 @@ footer {
         display: flex;
     }
 
-    .hamburger { display: block; }
+    .hamburger {
+        display: block;
+    }
 
-    .hero-content h1 { font-size: 2.5rem; }
-}
+    .logo {
+        font-size: 1.2rem;
+        gap: 8px;
+    }
 
-/* --- CONTACT FORM FIX & RESPONSIVE CENTER --- */
+    .logo img {
+        height: 40px;
+    }
 
-.contact-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    text-align: center;
-}
+    /* HERO */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 
-.contact-info {
-    flex: 1;
-    min-width: 280px;
-}
-
-.contact-info h3 {
-    font-family: var(--font-title);
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-}
-
-.contact-info p {
-    max-width: 400px;
-    margin: 0 auto 20px auto;
-}
-
-.info-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.info-item i {
-    color: var(--primary-color);
-}
-
-/* FORMULAIRE CENTRÉ */
-.contact-form {
-    flex: 1;
-    min-width: 280px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-}
-
-input, select, textarea {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 1rem;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #fbfbfb;
-    display: block;
-}
-
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    background: white;
-}
-
-button[type="submit"] {
-    width: 100%;
-    max-width: 400px;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--text-color);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
+    /* CONTACT */
     .contact-container {
         padding: 2rem 1rem;
-        text-align: center;
     }
 
-    input, select, textarea {
-        font-size: 1rem;
-        width: 100%;
-        max-width: 100%;
-    }
-
+    input, select, textarea,
     button[type="submit"] {
         max-width: 100%;
     }
 }
-
-/*
-!* --- BOUTON WHATSAPP FLOTTANT --- *!
-.whatsapp-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366; !* Vert WhatsApp Officiel *!
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000; !* Pour qu'il soit toujours au-dessus du reste *!
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.1); !* Grossit légèrement au survol *!
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-}
-
-!* Ajustement pour mobile pour ne pas gêner *!
-@media (max-width: 768px) {
-    .whatsapp-btn {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 28px;
-    }
-}*/
