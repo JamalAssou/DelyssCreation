@@ -422,3 +422,49 @@ footer {
         max-width: 100%;
     }
 }
+
+/* ==========================================================================
+   Styles pour le consentement dans le formulaire
+   ========================================================================== */
+.contact-form .consentement {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.contact-form .consentement input[type="checkbox"] {
+    margin-top: 5px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Styles pour les liens légaux dans le footer */
+footer .liens-legaux {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .liens-legaux a {
+    color: #fff; /* Assurez-vous que la couleur est adaptée à votre footer */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 0 10px;
+}
+
+footer .liens-legaux a:hover {
+    text-decoration: underline;
+}
+
+footer .liens-legaux .separateur {
+    color: #fff; /* Couleur du séparateur | */
+    font-size: 0.9rem;
+}
